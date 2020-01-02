@@ -16,6 +16,7 @@ const ReactNotepad = props => {
     rootColor,
     rootBorder,
     rootBorderRadius,
+    rootOverflow,
     showBorder,
     editorHeight,
     editorMinHeight,
@@ -76,7 +77,8 @@ const ReactNotepad = props => {
           ? `${rootBorder.size} ${rootBorder.style} ${rootBorder.color}`
           : "1px solid #000"
         : "none",
-    borderRadius: rootBorderRadius ? rootBorderRadius : "5px"
+    borderRadius: rootBorderRadius ? rootBorderRadius : "5px",
+    overflow: rootOverflow ? rootOverflow : "auto"
   };
 
   const ReactNotepadEditorStyle = {
@@ -264,6 +266,7 @@ ReactNotepad.PropTypes = {
   rootColor: PropTypes.string,
   rootBorder: PropTypes.object,
   rootBorderRadius: PropTypes.string,
+  rootOverflow: PropTypes.string,
   showBorder: PropTypes.string,
   editorHeight: PropTypes.string,
   editorMinHeight: PropTypes.string,
