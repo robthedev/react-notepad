@@ -1,4 +1,5 @@
 import React, { Component, useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import {
   convertFromRaw,
   convertToRaw,
@@ -22,6 +23,7 @@ const ReactNotepad = props => {
     editorPadding,
     editorAlignText,
     controlsColor,
+    controlsBorder,
     controlsMargin,
     controlsPadding,
     useLocalStorage
@@ -90,7 +92,9 @@ const ReactNotepad = props => {
     justifyContent: "space-evenly",
     margin: controlsMargin ? controlsMargin : "1rem 1rem 0 1rem",
     paddingBottom: controlsPadding ? controlsPadding : "0.5rem",
-    borderBottom: "1px solid #6c757c",
+    borderBottom: controlsBorder
+      ? `${controlsBorder.size} ${controlsBorder.style} ${controlsBorder.color}`
+      : "1px solid #6c757c",
     color: controlsColor ? controlsColor : "#000"
   };
 
@@ -146,13 +150,13 @@ const ReactNotepad = props => {
 
   const getBlockStyle = block => {
     if (block.getType() === "blockquote") {
-      return "RichEditor-blockquote";
+      return "Reactnotepad-blockquote";
     } else {
       return null;
     }
   };
 
-  const BlockStyleControls = props => {
+  const BlockStyleControls = () => {
     const selection = editorState.getSelection();
     const blockType = editorState
       .getCurrentContent()
@@ -253,5 +257,24 @@ class StyleButton extends Component {
     );
   }
 }
+
+ReactNotepad.PropTypes = {
+  rootWidth: PropTypes.string,
+  rootBgColor: PropTypes.string,
+  rootColor: PropTypes.string,
+  rootBorder: PropTypes.object,
+  rootBorderRadius: PropTypes.string,
+  showBorder: PropTypes.string,
+  editorHeight: PropTypes.string,
+  editorMinHeight: PropTypes.string,
+  editorMaxHeight: PropTypes.string,
+  editorPadding: PropTypes.string,
+  editorAlignText: PropTypes.string,
+  controlsColor: PropTypes.string,
+  controlsBorder: PropTypes.object,
+  controlsMargin: PropTypes.string,
+  controlsPadding: PropTypes.string,
+  useLocalStorage: PropTypes.bool
+};
 
 export default ReactNotepad;
