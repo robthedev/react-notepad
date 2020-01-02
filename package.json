@@ -16,7 +16,7 @@
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
     "test": "nwb test-react --passWithNoTests",
-    "test:coverage": "nwb test-react --coverage",
+    "test:coverage": "nwb test-react --coverage --passWithNoTests",
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
