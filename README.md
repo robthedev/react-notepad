@@ -4,7 +4,7 @@
 [![npm package][npm-badge]][npm]
 [![Coverage Status][coveralls-badge]][coveralls]
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
+[build-badge]: https://travis-ci.org/robthedev/react-notepad.svg?branch=master
 [build]: https://travis-ci.org/robthedev/react-notepad
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
