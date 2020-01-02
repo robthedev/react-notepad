@@ -2,7 +2,6 @@
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coverage Status][coveralls-badge]][coveralls]
 
 [build-badge]: https://travis-ci.org/robthedev/react-notepad.svg?branch=master
 [build]: https://travis-ci.org/robthedev/react-notepad
