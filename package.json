@@ -1,7 +1,7 @@
 {
   "name": "react-notepad",
-  "version": "1.0.0",
-  "description": "react-notepad React component",
+  "version": "0.0.1",
+  "description": "A react notepad component for rich text editing.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -11,7 +11,7 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "nwb build-react-component --copy-files",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
     "start": "nwb serve-react-demo",
@@ -19,20 +19,30 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "draft-js": "^0.11.3"
+  },
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.x",
+    "draft-js": "^0.11.3"
   },
   "devDependencies": {
     "nwb": "0.23.x",
+    "prettier": "1.19.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
-  "author": "",
-  "homepage": "",
+  "author": "RobWillCode",
+  "homepage": "https://github.com/robthedev/react-notepad#readme",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/robthedev/react-notepad",
   "keywords": [
-    "react-component"
+    "react",
+    "notes",
+    "notepad",
+    "rich text",
+    "rich text editor",
+    "text editor",
+    "localstorage"
   ]
 }
