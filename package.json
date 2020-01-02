@@ -1,6 +1,6 @@
 {
   "name": "react-notepad",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A react notepad component for rich text editing.",
   "main": "lib/index.js",
   "module": "es/index.js",
