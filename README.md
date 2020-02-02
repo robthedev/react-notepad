@@ -12,4 +12,4 @@
 [coveralls-badge]: https://coveralls.io/repos/github/robthedev/react-notepad/badge.svg?branch=master
 [coveralls]: https://coveralls.io/github/robthedev/react-notepad?branch=master
 
-## Installation
+
